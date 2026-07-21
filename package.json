@@ -4,11 +4,11 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node api.js && next dev",
+    "build": "node api.js && next build",
     "check:client-bundles": "node scripts/check-client-bundles.js",
     "postbuild": "npm run check:client-bundles",
-    "start": "next start",
+    "start": "node api.js && next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@stellar/stellar-sdk": "^16.0.1",
-    "@supabase/ssr": "^0.12.0",
+    "@supabase/ssr": "^0.12.3",
     "@supabase/supabase-js": "^2.110.2",
     "libphonenumber-js": "^1.13.9",
     "next": "16.2.10",
